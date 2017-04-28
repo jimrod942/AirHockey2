@@ -9,12 +9,11 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
-//        let border = SKPhysicsBody(edgeFrom: <#T##CGPoint#>, to: <#T##CGPoint#>)
-//        border.friction = 0
-//        self.physicsBody = border
+        physicsWorld.contactDelegate = self
+
         let bottomLeft = CGPoint(x: frame.origin.x, y: frame.origin.y)
         let bottomRight = CGPoint(x: -frame.origin.x, y: frame.origin.y)
         let topLeft = CGPoint(x: frame.origin.x, y: -462)
