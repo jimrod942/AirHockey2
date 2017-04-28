@@ -43,8 +43,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         let bottomLeft = CGPoint(x: frame.origin.x, y: frame.origin.y)
         let bottomRight = CGPoint(x: -frame.origin.x, y: frame.origin.y)
-        let topLeft = CGPoint(x: frame.origin.x, y: -462)
-        let topRight = CGPoint(x: -frame.origin.x, y: 462)
+        let topLeft = CGPoint(x: frame.origin.x, y: 234)
+        let topRight = CGPoint(x: -frame.origin.x, y: 234)
         
         let bottom = SKSpriteNode()
         bottom.name = "bottom"
