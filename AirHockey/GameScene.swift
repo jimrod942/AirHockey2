@@ -33,6 +33,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         rightPaddle = self.childNode(withName: "rightPaddle") as! SKSpriteNode
         leftPaddle = self.childNode(withName: "leftPaddle") as! SKSpriteNode
         puck = self.childNode(withName: "puck") as! SKSpriteNode
+        rightGoal = self.childNode(withName: "rightGoal") as! SKSpriteNode
+        leftGoal = self.childNode(withName: "leftGoal") as! SKSpriteNode
+        rightScore = self.childNode(withName: "rightScore") as! SKSpriteNode
+        leftScore = self.childNode(withName: "leftScore") as! SKSpriteNode
+
         
         physicsWorld.contactDelegate = self
 
