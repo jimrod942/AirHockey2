@@ -16,6 +16,7 @@ let leftCategory: UInt32 = 0x1 << 3
 let rightCategory: UInt32 = 0x1 << 4
 let paddleCategory: UInt32 = 0x1 << 5
 let goalCategory: UInt32 = 0x1 << 6
+let scoreCategory: UInt32 = 0x1 << 7
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
@@ -24,6 +25,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var puck = SKSpriteNode()
     var rightGoal = SKSpriteNode()
     var leftGoal = SKSpriteNode()
+    var leftScore = SKSpriteNode()
+    var rightScore = SKSpriteNode()
     
     override func didMove(to view: SKView)
     {
