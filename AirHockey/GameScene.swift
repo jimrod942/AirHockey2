@@ -22,6 +22,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var rightPaddle = SKSpriteNode()
     var leftPaddle = SKSpriteNode()
     var puck = SKSpriteNode()
+    var rightGoal = SKSpriteNode()
+    var leftGoal = SKSpriteNode()
     
     override func didMove(to view: SKView)
     {
