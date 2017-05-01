@@ -30,7 +30,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         puck = self.childNode(withName: "puck") as! SKSpriteNode
         
         physicsWorld.contactDelegate = self
-
+        
         let bottomLeft = CGPoint(x: frame.origin.x, y: frame.origin.y)
         let bottomRight = CGPoint(x: -frame.origin.x, y: frame.origin.y)
         let topLeft = CGPoint(x: frame.origin.x, y: -462)
@@ -56,18 +56,35 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(left)
         addChild(top)
         addChild(right)
-
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        <#code#>
+        for touch in touches {
+            let location = touch.location(in: self)
+            if location.x > 0 && location.y < 234{
+                rightPaddle.run(SKAction.move(to: location, duration: 0.1))
+            }
+            if location.x < 0 && location.y < 234 {
+                leftPaddle.run(SKAction.move(to: location, duration: 0.1))
+            }
+        }
+        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        <#code#>
+        for touch in touches {
+            let location = touch.location(in: self)
+            if location.x > 0 && location.y < 234{
+                rightPaddle.run(SKAction.move(to: location, duration: 0.1))
+            }
+            if location.x < 0 && location.y < 234 {
+                leftPaddle.run(SKAction.move(to: location, duration: 0.1))
+            }
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
-
+        
     }
 }
