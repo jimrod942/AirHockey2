@@ -35,12 +35,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         puck = self.childNode(withName: "puck") as! SKSpriteNode
         rightGoal = self.childNode(withName: "rightGoal") as! SKSpriteNode
         leftGoal = self.childNode(withName: "leftGoal") as! SKSpriteNode
-        rightScore = self.childNode(withName: "rightScore") as! SKSpriteNode
-        leftScore = self.childNode(withName: "leftScore") as! SKSpriteNode
 
         
         physicsWorld.contactDelegate = self
-
+        
         let bottomLeft = CGPoint(x: frame.origin.x, y: frame.origin.y)
         let bottomRight = CGPoint(x: -frame.origin.x, y: frame.origin.y)
         let topLeft = CGPoint(x: frame.origin.x, y: 234)
@@ -93,6 +91,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {
-
+        
     }
 }
