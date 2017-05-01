@@ -15,8 +15,8 @@ let topCategory: UInt32 = 0x1 << 2
 let leftCategory: UInt32 = 0x1 << 3
 let rightCategory: UInt32 = 0x1 << 4
 let paddleCategory: UInt32 = 0x1 << 5
-let goalCategory: UInt32 = 0x1 << 6
-let scoreCategory: UInt32 = 0x1 << 7
+let leftGoalCategory: UInt32 = 0x1 << 6
+let rightGoalCategory: UInt32 = 0x1 << 7
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
@@ -66,6 +66,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(left)
         addChild(top)
         addChild(right)
+        
+        leftPaddle.physicsBody?.categoryBitMask = paddleCategory
+        rightPaddle.physicsBody?.categoryBitMask = paddleCategory
+        puck.physicsBody?.categoryBitMask = puckCategory
+        leftGoal.physicsBody?.categoryBitMask = leftGoalCategory
+        rightGoal.physicsBody?.categoryBitMask = rightGoalCategory
+        
+        puck.physicsBody?.contactTestBitMask = paddleCategory | leftGoalCategory | rightGoalCategory
+        
         
     }
     
