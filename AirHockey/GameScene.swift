@@ -41,8 +41,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let bottomLeft = CGPoint(x: frame.origin.x, y: frame.origin.y)
         let bottomRight = CGPoint(x: -frame.origin.x, y: frame.origin.y)
-        let topLeft = CGPoint(x: frame.origin.x, y: 234)
-        let topRight = CGPoint(x: -frame.origin.x, y: 234)
+        let topLeft = CGPoint(x: frame.origin.x, y: 284)
+        let topRight = CGPoint(x: -frame.origin.x, y: 284)
         
         let bottom = SKSpriteNode()
         bottom.name = "bottom"
@@ -70,10 +70,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
-            if location.x > 0 && location.y < 234{
+            if location.x > 0 && location.y < 249{
                 rightPaddle.run(SKAction.move(to: location, duration: 0.1))
             }
-            if location.x < 0 && location.y < 234 {
+            if location.x < 0 && location.y < 249 {
                 leftPaddle.run(SKAction.move(to: location, duration: 0.1))
             }
         }
@@ -83,10 +83,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
-            if location.x > 0 && location.y < 234{
+            if location.x > 0 && location.y < 249{
                 rightPaddle.run(SKAction.move(to: location, duration: 0.1))
             }
-            if location.x < 0 && location.y < 234 {
+            if location.x < 0 && location.y < 249 {
                 leftPaddle.run(SKAction.move(to: location, duration: 0.1))
             }
         }
