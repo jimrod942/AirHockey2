@@ -25,8 +25,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var puck = SKSpriteNode()
     var rightGoal = SKSpriteNode()
     var leftGoal = SKSpriteNode()
-    var leftScore = SKSpriteNode()
-    var rightScore = SKSpriteNode()
+    var leftScore = SKLabelNode()
+    var rightScore = SKLabelNode()
+    var leftScoreCounter = 0
+    var rightScoreCounter = 0
     
     override func didMove(to view: SKView)
     {
@@ -88,6 +90,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             if location.x < 0 && location.y < 234 {
                 leftPaddle.run(SKAction.move(to: location, duration: 0.1))
+            }
+        }
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        if contact.bodyA.categoryBitMask == goalCategory {
+            if contact.bodyA == leftGoal {
+                leftScoreCounter += 1
+                leftScore = SKLabelNode(text: "\(leftScoreCounter)")
+            }
+            else if contact.bodyA == rightGoal {
+                rightScoreCounter += 1
+                rightScore = SKLabelNode(text: "\(rightScoreCounter)")
             }
         }
     }
