@@ -35,8 +35,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         puck = self.childNode(withName: "puck") as! SKSpriteNode
         rightGoal = self.childNode(withName: "rightGoal") as! SKSpriteNode
         leftGoal = self.childNode(withName: "leftGoal") as! SKSpriteNode
-        rightScore = self.childNode(withName: "rightScore") as! SKLabelNode
-        leftScore = self.childNode(withName: "leftScore") as! SKLabelNode
 
         
         physicsWorld.contactDelegate = self
