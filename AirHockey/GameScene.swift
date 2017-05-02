@@ -37,7 +37,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         puck = self.childNode(withName: "puck") as! SKSpriteNode
         rightGoal = self.childNode(withName: "rightGoal") as! SKSpriteNode
         leftGoal = self.childNode(withName: "leftGoal") as! SKSpriteNode
-
+        addChild(leftScore)
+        addChild(rightScore)
         
         physicsWorld.contactDelegate = self
         
@@ -104,15 +105,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-        if contact.bodyA.categoryBitMask == goalCategory {
-            if contact.bodyA == leftGoal {
-                leftScoreCounter += 1
-                leftScore = SKLabelNode(text: "\(leftScoreCounter)")
-            }
-            else if contact.bodyA == rightGoal {
-                rightScoreCounter += 1
-                rightScore = SKLabelNode(text: "\(rightScoreCounter)")
-            }
+        if contact.bodyA.categoryBitMask == rightGoalCategory {
+            print("Here")
+            leftScoreCounter += 1
+            print(leftScoreCounter)
+            leftScore.text = "\(leftScoreCounter)"
+        }
+        else if contact.bodyA.categoryBitMask == leftGoalCategory {
+            rightScoreCounter += 1
+            rightScore.text = "\(rightScoreCounter)"
         }
     }
     
