@@ -105,7 +105,7 @@
 				TargetAttributes = {
 					D71EE8A21EAF9FF1002DCEF8 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 22L9R8NETM;
+						DevelopmentTeam = 9B73LZ8LTH;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -275,7 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 22L9R8NETM;
+				DEVELOPMENT_TEAM = 9B73LZ8LTH;
 				INFOPLIST_FILE = AirHockey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.AirHockey;
@@ -289,7 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 22L9R8NETM;
+				DEVELOPMENT_TEAM = 9B73LZ8LTH;
 				INFOPLIST_FILE = AirHockey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.AirHockey;
