@@ -11,6 +11,8 @@
 import SpriteKit
 import GameplayKit
 
+// This is Olivia
+
 let puckCategory: UInt32 = 0x1 << 0
 let bottomCategory: UInt32 = 0x1 << 1
 let topCategory: UInt32 = 0x1 << 2
@@ -34,6 +36,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView)
     {
+        print("Hello World")
         rightPaddle = self.childNode(withName: "rightPaddle") as! SKSpriteNode
         leftPaddle = self.childNode(withName: "leftPaddle") as! SKSpriteNode
         puck = self.childNode(withName: "puck") as! SKSpriteNode
