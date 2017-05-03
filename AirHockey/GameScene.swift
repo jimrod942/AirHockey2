@@ -32,6 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView)
     {
+        print("Hello World")
         rightPaddle = self.childNode(withName: "rightPaddle") as! SKSpriteNode
         leftPaddle = self.childNode(withName: "leftPaddle") as! SKSpriteNode
         puck = self.childNode(withName: "puck") as! SKSpriteNode
