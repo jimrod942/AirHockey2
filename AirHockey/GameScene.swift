@@ -5,6 +5,8 @@
 //  Created by student3 on 4/25/17.
 //  Copyright © 2017 John Hersey High School. All rights reserved.
 //
+// a comment, not any code
+// veeeeerrrrry sneaky
 
 import SpriteKit
 import GameplayKit
@@ -33,6 +35,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView)
     {
+        print("Hello World")
         rightPaddle = self.childNode(withName: "rightPaddle") as! SKSpriteNode
         leftPaddle = self.childNode(withName: "leftPaddle") as! SKSpriteNode
         puck = self.childNode(withName: "puck") as! SKSpriteNode
